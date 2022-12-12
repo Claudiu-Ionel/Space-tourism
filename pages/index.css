@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Barlow Condensed', sans-serif;;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+#main { 
+  display: flex;
+  width: 100%;
+  height: 100%;
+background: url("../assets/home/background-home-desktop.jpg") no-repeat center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 80px;
+  margin: 40px 0px 0px 55px;
+}
+.navbar-left {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.logo {
+  width: 20%;
+
+}
+
+.logo img {
+  width: 48px;
+  height: auto;
+}
+
+.rectangle-wrapper { 
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.rectangle {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 55%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #97979750;
+  z-index: 2;
+}
+.navbar-right {
+  width: 55%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-links {
+  width: 100%;
+  height: 100%;
+  display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0px 50px;
+    align-items: center;
+    color: #ffffff;
+    background-color: rgba(255,255,255, 4%);
+    backdrop-filter: blur(10px);
+    letter-spacing: 11px;
+}
+
+.nav-link {
+  background: none;
+  height: 100%;
+  color: rgb(208,214,249);
+  border: 2px solid transparent;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.nav-link span {
+  font-weight: 500;
+  color: #fff;
+  margin-right: 5px;
+}
+
+.nav-link:hover {
+  border-bottom: 2px solid #fff;
+}
