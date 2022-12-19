@@ -4,26 +4,29 @@
   box-sizing: border-box;
   font-family: 'Barlow Condensed', sans-serif;;
 }
-
-body {
-  width: 100%;
+:root {
+  --main: #fff;
+  --secondary : #D0D6F9
+}
+body, html {
+  width: 100vw;
   height: 100vh;
 }
 
 #main { 
   display: flex;
-  width: 100%;
-  height: 100%;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
 background: url("../assets/home/background-home-desktop.jpg") no-repeat center;
   background-attachment: fixed;
-  background-size: cover;
+  background-size:cover;
 }
 
 .navbar {
   display: flex;
   flex-direction: row;
-  width: 100%;
-  height: 80px;
+  height: 96px;
   margin: 40px 0px 0px 55px;
 }
 .navbar-left {
@@ -51,12 +54,12 @@ background: url("../assets/home/background-home-desktop.jpg") no-repeat center;
 }
 .rectangle {
   position: absolute;
-  width: 100%;
+  width: 110%;
   height: 1px;
-  left: 55%;
+  left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background-color: #97979750;
+  background-color: #9797975d;
   z-index: 2;
 }
 .navbar-right {
@@ -83,11 +86,15 @@ background: url("../assets/home/background-home-desktop.jpg") no-repeat center;
 .nav-link {
   background: none;
   height: 100%;
-  color: rgb(208,214,249);
-  border: 2px solid transparent;
+  color: var(--secondary);
+  border: 3px solid transparent;
   letter-spacing: 3px;
   text-transform: uppercase;
   cursor: pointer;
+  transition: border 250ms;
+}
+.nav-link[data-isActive="true"] {
+  border-bottom: 3px solid #fff
 }
 .nav-link span {
   font-weight: 500;
@@ -96,5 +103,100 @@ background: url("../assets/home/background-home-desktop.jpg") no-repeat center;
 }
 
 .nav-link:hover {
-  border-bottom: 2px solid #fff;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.65);
+}
+
+#content {
+ display: flex;
+  width: 100%;
+  height: 90%;
+  padding-left: 55px;
+}
+.content-left-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #fff;
+  width: 50%;
+  height: 100%;
+  padding: 0px 40px 60px 80px;
+}
+.content-left {
+  max-width: 450px;
+  height: 382px;
+  
+}
+
+
+.secondary-heading {
+  letter-spacing: 4.72px;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--secondary);
+  
+}
+.main-heading {
+  font-family: "Bellefair";
+  text-transform: uppercase;
+  font-size: 9rem;
+    font-weight: 400;
+    color: var(--main);
+}
+.secondary-heading, 
+.main-heading {
+margin-bottom: 20px;
+}
+.details {
+  line-height: 32px;
+  font-size: 18px;
+  max-width: 95%;
+  color: var(--secondary);
+}
+
+.content-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  padding: 0px 40px 60px 80px;
+  ;
+}
+.explore-button {
+  background-color: #fff;
+  position: relative;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  font-size: 32px;
+  font-family: "Bellefair";
+  color: black;
+  /* font-weight: 200; */
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 200ms;
+  outline: 0px solid transparent;
+  margin-bottom: 50px;
+}
+
+/* .explore-button::before {
+  position: absolute;
+  content: "";
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+  background-color: #979797;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 250ms;
+  z-index: -1;
+} */
+
+.explore-button:hover {
+  outline: 60px solid rgba(255, 255, 255, 0.111);
 }
